@@ -32,8 +32,11 @@
 
     <script>
       window.$docsify = {
-        loadSidebar: "SUMMARY.md",
-        maxLevel: 5
+        loadSidebar: true,
+        maxLevel: 5,
+        alias: {
+         '/.*/_sidebar.md': '/_sidebar.md'
+        }
         // configure Docsify here
         //  https://docsify.js.org/#/configuration
       };
