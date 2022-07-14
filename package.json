@@ -1,0 +1,11 @@
+{
+  "name": "ldt2dr",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "/index.html",
+  "dependencies": {
+    "docsify": "https://pkg.csb.dev/docsifyjs/docsify/commit/9847f69f/docsify",
+    "docsify-server-renderer": "https://pkg.csb.dev/docsifyjs/docsify/commit/9847f69f/docsify-server-renderer"
+  }
+}
