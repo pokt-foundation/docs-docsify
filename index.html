@@ -7,14 +7,11 @@
 
     <!-- use the "docsify-themeable" theme for maximum customizability
         https://jhildenbiddle.github.io/docsify-themeable/ -->
-    <link
-      rel="stylesheet"
-      href="//unpkg.com/docsify-themeable@0.7.2/dist/css/theme-simple.css"
-    />
     <!-- <link
       rel="stylesheet"
-      href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dark.css"
+      href="//unpkg.com/docsify-themeable@0.7.2/dist/css/theme-simple.css"
     /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
 
     <style>
       /* customize the theme by setting CSS variables below
@@ -32,8 +29,12 @@
 
     <script>
       window.$docsify = {
+        coverpage: ['/', '/zh-cn/'],
         loadSidebar: true,
-        maxLevel: 5,
+        loadNavbar: true,
+        homepage: "README.md",
+        maxLevel: 3,
+        subMaxLevel: 3,
         alias: {
          '/.*/_sidebar.md': '/_sidebar.md'
         }
@@ -50,6 +51,7 @@
     <!-- add more plugins here
         https://docsify.js.org/#/plugins -->
     <script src="//unpkg.com/docsify-copy-code@2.1.0/dist/docsify-copy-code.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
 
     <!-- include the Glitch button to show what the webpage is about and
         to make it easier for folks to view source and remix -->
