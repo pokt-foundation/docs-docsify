@@ -37,10 +37,80 @@
         subMaxLevel: 3,
         alias: {
          '/.*/_sidebar.md': '/_sidebar.md'
-        }
-        // configure Docsify here
-        //  https://docsify.js.org/#/configuration
-      };
+        },
+        search: 'auto', // default
+
+        search : [
+          '/',            // => /README.md
+          '/learn',       // => /guide.md
+          '/node', // => /get-started.md
+          '/zh-cn/',      // => /zh-cn/README.md
+        ],
+
+          // complete configuration parameters
+          search: {
+            maxAge: 86400000, // Expiration time, the default one day
+            paths: [], // or 'auto'
+            placeholder: 'Type to search',
+
+            // Localization
+            placeholder: {
+              '/zh-cn/': '搜索',
+              '/': 'Type to search'
+            },
+
+            noData: 'No Results!',
+
+            // Localization
+            noData: {
+              '/zh-cn/': '找不到结果',
+              '/': 'No Results'
+            },
+
+            // Headline depth, 1 - 6
+            depth: 2,
+
+            hideOtherSidebarContent: false, // whether or not to hide other sidebar content
+
+            // To avoid search index collision
+            // between multiple websites under the same domain
+            namespace: 'website-1',
+
+            // Use different indexes for path prefixes (namespaces).
+            // NOTE: Only works in 'auto' mode.
+            //
+            // When initialiazing an index, we look for the first path from the sidebar.
+            // If it matches the prefix from the list, we switch to the corresponding index.
+            pathNamespaces: ['/zh-cn', '/ru-ru', '/ru-ru/v1'],
+
+            // You can provide a regexp to match prefixes. In this case,
+            // the matching substring will be used to identify the index
+            pathNamespaces: /^(\/(zh-cn|ru-ru))?(\/(v1|v2))?/
+          },
+          admonition: {
+            labelVisibility: 'hidden'
+          },
+          pagination: {
+            previousText: '上一章节',
+            // or
+            nextText: {
+              '/en/': 'NEXT',
+              '/': '下一章节'
+            },
+            crossChapter: true,
+            crossChapterText: true,
+          },
+          tabs: {
+            persist    : true,      // default
+            sync       : true,      // default
+            theme      : 'material', // default
+            tabComments: true,      // default
+            tabHeadings: true       // default
+          }
+          // plugins: [
+          //   EditOnGithubPlugin.create("https://github.com/pokt-foundation/docs-docsify", docEditBase, title)
+          // ]
+          };
     </script>
 
     <!-- load Docsify and docsify-themeable
@@ -52,6 +122,13 @@
         https://docsify.js.org/#/plugins -->
     <script src="//unpkg.com/docsify-copy-code@2.1.0/dist/docsify-copy-code.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="http://unpkg.com/docsify-admonition-plugin/build/admonition.css" />
+    <script src="http://unpkg.com/docsify-admonition-plugin/build/index.js"></script>
+    <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
 
     <!-- include the Glitch button to show what the webpage is about and
         to make it easier for folks to view source and remix -->

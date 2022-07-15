@@ -6,9 +6,9 @@ This section will detail the hardware and software needed to run a Pocket node.
 
 **Hardware Requirements:** 4 CPU’s (or vCPU’s) | 16 GB RAM | 200GB Disk
 
-{% hint style="info" %}
+> [!hint][Hint]
 These are just the hardware requirements for your Pocket node. You'll also need to run the full nodes of other blockchains, which may have their own hardware requirements that surpass Pocket's.
-{% endhint %}
+>
 
 ## Software
 
@@ -36,19 +36,22 @@ git clone https://github.com/pokt-network/pocket-core.git && cd pocket-core
 
 Checkout the [latest release](https://github.com/pokt-network/pocket-core/releases)
 
-{% tabs %}
-{% tab title="Command" %}
+<!-- tabs:start -->
+
+#### **Command**
+
 ```
 git checkout tags/<release tag>
 ```
-{% endtab %}
 
-{% tab title="Example" %}
+#### **Example**
+
 ```
 git checkout tags/RC-0.8.2
 ```
-{% endtab %}
-{% endtabs %}
+
+<!-- tabs:end -->
+
 
 Make sure you have $GOPATH setup
 
@@ -148,9 +151,9 @@ See [pokt-network/pocket-core-deployments](https://github.com/pokt-network/pocke
 ulimit -Sn 16384
 ```
 
-{% hint style="warning" %}
+> [!caution][Warning]
 This Open Files Limit is set based on the standard config provided with Pocket Core in `<datadir>/config/config.json`. If you modify your config, you will need to ensure that you modify your Open Files Limit too, according to the formula below.
-{% endhint %}
+>
 
 The required `ulimit` can be calculated using this formula:
 

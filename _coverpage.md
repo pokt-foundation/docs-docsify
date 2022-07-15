@@ -10,7 +10,7 @@
 - No statically built html files
 - Multiple themes
 
-[GitHub](https://github.com/pokt/docs-docsify/)
+[GitHub](https://github.com/pokt-foundation/docs-docsify)
 [Get Started](#main)
 
 <!-- background color -->
